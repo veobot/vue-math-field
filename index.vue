@@ -4,6 +4,7 @@
   :error-messages="message"
   :error="error"
   :success="!error && mode === 'display'"
+  :disabled="disabled"
   @blur="blur"
   @click:append-outer="$emit('click:append-outer', $event)"
   @click:append="$emit('click:append', $event)"
@@ -41,6 +42,10 @@ export default {
     autoSelect: {
       type: Boolean,
       default: true
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     },
     displayPrecision: {
       type: Number,
